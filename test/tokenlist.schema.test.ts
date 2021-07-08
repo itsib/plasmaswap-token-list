@@ -1,4 +1,5 @@
 import Ajv from 'ajv';
+import addFormats from 'ajv-formats';
 import { schema } from '../src';
 import exampleList from './schema/example.tokenlist.json';
 import exampleNameSymbolSpecialCharacters from './schema/example-name-symbol-special-characters.tokenlist.json';
@@ -18,7 +19,8 @@ import invalidDecimals2 from './schema/invaliddecimals.2.tokenlist.json';
 import extensionsValid from './schema/extensions-valid.tokenlist.json';
 import extensionsInvalid from './schema/extensions-invalid.tokenlist.json';
 
-const ajv = new Ajv({ allErrors: true, format: 'full' });
+const ajv = new Ajv({ allErrors: true, unicodeRegExp: false });
+addFormats(ajv);
 const validator = ajv.compile(schema);
 
 describe('schema', () => {

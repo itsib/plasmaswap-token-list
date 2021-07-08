@@ -1,7 +1,7 @@
 {
   "name": "@plasma-fi/token-lists",
   "description": "📚 The Token Lists specification",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -35,11 +35,12 @@
     "test": "tsdx test",
     "lint": "tsdx lint src test",
     "lint:fix": "tsdx lint src test --fix",
-    "prepublish": "./pre-publish.sh"
+    "prepublishOnly": "./pre-publish.sh"
   },
   "peerDependencies": {},
   "devDependencies": {
     "ajv": "^8.6.1",
+    "ajv-formats": "^2.1.0",
     "tsdx": "^0.14.1",
     "tslib": "^2.3.0",
     "typescript": "^3.9.10",
