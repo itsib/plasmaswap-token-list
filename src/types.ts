@@ -1,3 +1,5 @@
+import { TokenInfoChanges } from 'diff-token-lists';
+
 export interface TokenInfo {
   readonly chainId: number;
   readonly address: string;
@@ -32,4 +34,26 @@ export interface TokenList {
   readonly keywords?: string[];
   readonly tags?: Tags;
   readonly logoURI?: string;
+}
+
+/**
+ * Differences between a base list and an updated list.
+ */
+export interface TokenListDiff {
+  /**
+   * Tokens from updated with chainId/address not present in base list
+   */
+  readonly added: TokenInfo[];
+  /**
+   * Tokens from base with chainId/address not present in the updated list
+   */
+  readonly removed: TokenInfo[];
+  /**
+   * The token info that changed
+   */
+  readonly changed: {
+    [chainId: number]: {
+      [address: string]: TokenInfoChanges;
+    };
+  };
 }

@@ -1,4 +1,4 @@
-import { versionComparator } from './versionComparator';
+import { versionComparator } from './version-comparator';
 import { Version } from './types';
 
 /**

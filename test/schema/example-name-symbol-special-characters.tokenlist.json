@@ -36,6 +36,13 @@
       "symbol": "$TRDL",
       "name": "Strudel Finance",
       "decimals": 18
+    },
+    {
+      "chainId": 1,
+      "address": "0x774B343B8763E514010815072D3877dfD9D6C1b0",
+      "symbol": "OTF",
+      "name": "Oracles & IoT Fund",
+      "decimals": 18
     }
   ],
   "version": {

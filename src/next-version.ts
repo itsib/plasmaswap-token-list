@@ -1,4 +1,4 @@
-import { VersionUpgrade } from './getVersionUpgrade';
+import { VersionUpgrade } from './get-version-upgrade';
 import { Version } from './types';
 
 /**

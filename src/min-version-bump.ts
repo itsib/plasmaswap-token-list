@@ -1,5 +1,5 @@
-import { diffTokenLists } from './diffTokenLists';
-import { VersionUpgrade } from './getVersionUpgrade';
+import { diffTokenLists } from './diff-token-lists';
+import { VersionUpgrade } from './get-version-upgrade';
 import { TokenInfo } from './types';
 
 /**
